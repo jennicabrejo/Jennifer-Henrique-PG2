@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B25BF954-E17F-4DB2-945C-38B496D46D69}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TALLERM</RootNamespace>
+    <AssemblyName>TALLERM</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>D:\GammingSpace\Dev\WinForms\MITA_PROYECTS\TALLER\PUBLISH\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>4</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>29AC3E028AD95822B0A9E347E5875DA061F5EF84</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>CONMMAP_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>tork.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\CatalogoRepuestosController.cs" />
+    <Compile Include="Controllers\ControlMantenimientosController.cs" />
+    <Compile Include="Controllers\ControlRepuestosXMantenimientosController.cs" />
+    <Compile Include="Controllers\ControlVehiculosController.cs" />
+    <Compile Include="Controllers\ControlTiposVehiculosController.cs" />
+    <Compile Include="Controllers\VistaBitacoraController.cs" />
+    <Compile Include="Controllers\GestionUsuariosController.cs" />
+    <Compile Include="Controllers\GestionProveedoresController.cs" />
+    <Compile Include="Controllers\GestionEncargadosController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Models\Fictional\_MANTENIMIENTOS_REPORTE.cs" />
+    <Compile Include="Models\Fictional\_REPUESTOS_COMBO.cs" />
+    <Compile Include="Models\Fictional\_REPUESTOS_X_MANTENIMIENTOS.cs" />
+    <Compile Include="Models\Fictional\_MANTENIMIENTOS.cs" />
+    <Compile Include="Models\Fictional\_BITACORAS.cs" />
+    <Compile Include="Models\DB\BITACORAS.cs" />
+    <Compile Include="Models\DB\DBContext.cs" />
+    <Compile Include="Models\DB\ENCARGADOS.cs" />
+    <Compile Include="Models\DB\MANTENIMIENTOS.cs" />
+    <Compile Include="Models\Fictional\_ENCARGADOS_COMBO.cs" />
+    <Compile Include="Models\Fictional\_PROVEEDORES_COMBO.cs" />
+    <Compile Include="Models\Fictional\_TIPOS_VEHICULOS_COMBO.cs" />
+    <Compile Include="Models\Fictional\_USUARIOS.cs" />
+    <Compile Include="Models\Fictional\_REPUESTOS.cs" />
+    <Compile Include="Models\Fictional\_TIPOS_VEHICULOS.cs" />
+    <Compile Include="Models\Fictional\_VEHICULOS_COMBO.cs" />
+    <Compile Include="Models\Fictional\_VEHICULOS.cs" />
+    <Compile Include="Models\Fictional\_PROVEEDORES.cs" />
+    <Compile Include="Models\DB\PROVEEDORES.cs" />
+    <Compile Include="Models\DB\REPUESTOS.cs" />
+    <Compile Include="Models\DB\REPUESTOS_X_MANTENIMIENTOS.cs" />
+    <Compile Include="Models\DB\TIPOS_VEHICULOS.cs" />
+    <Compile Include="Models\DB\USUARIOS.cs" />
+    <Compile Include="Models\DB\VEHICULOS.cs" />
+    <Compile Include="Models\Fictional\_ENCARGADOS.cs" />
+    <Compile Include="Models\GR.cs" />
+    <Compile Include="Support\ConfigsFromManager.cs" />
+    <Compile Include="Support\PrintController.cs" />
+    <Compile Include="Support\Security.cs" />
+    <Compile Include="Support\WarnToBinnacle.cs" />
+    <Compile Include="Views\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MControlMantenimientosConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MControlMantenimientosConsulta.Designer.cs">
+      <DependentUpon>MControlMantenimientosConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MRepuestosXMantenimiento_modal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MRepuestosXMantenimiento_modal.Designer.cs">
+      <DependentUpon>MRepuestosXMantenimiento_modal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MVistaBitacora_modal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MVistaBitacora_modal.Designer.cs">
+      <DependentUpon>MVistaBitacora_modal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MVistaBitacora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MVistaBitacora.Designer.cs">
+      <DependentUpon>MVistaBitacora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MControlVehiculos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MControlVehiculos.Designer.cs">
+      <DependentUpon>MControlVehiculos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MControlVehiculos_modal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MControlVehiculos_modal.Designer.cs">
+      <DependentUpon>MControlVehiculos_modal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MGestionProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MGestionProveedores.Designer.cs">
+      <DependentUpon>MGestionProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MCatalogoRepuestos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MCatalogoRepuestos.Designer.cs">
+      <DependentUpon>MCatalogoRepuestos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MGestionEncargados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MGestionEncargados.Designer.cs">
+      <DependentUpon>MGestionEncargados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MControlTiposVehiculos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MControlTiposVehiculos.Designer.cs">
+      <DependentUpon>MControlTiposVehiculos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MGestionUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MGestionUsuarios.Designer.cs">
+      <DependentUpon>MGestionUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MGestionProveedores_modal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MGestionProveedores_modal.Designer.cs">
+      <DependentUpon>MGestionProveedores_modal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MCatalogoRepuestos_modal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MCatalogoRepuestos_modal.Designer.cs">
+      <DependentUpon>MCatalogoRepuestos_modal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MGestionEncargados_modal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MGestionEncargados_modal.Designer.cs">
+      <DependentUpon>MGestionEncargados_modal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MControlTiposVehiculos_modal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MControlTiposVehiculos_modal.Designer.cs">
+      <DependentUpon>MControlTiposVehiculos_modal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MGestionUsuarios_modal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MGestionUsuarios_modal.Designer.cs">
+      <DependentUpon>MGestionUsuarios_modal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MControlMantenimientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MControlMantenimientos.Designer.cs">
+      <DependentUpon>MControlMantenimientos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\MReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MReportes.Designer.cs">
+      <DependentUpon>MReportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Views\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MControlMantenimientosConsulta.resx">
+      <DependentUpon>MControlMantenimientosConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MRepuestosXMantenimiento_modal.resx">
+      <DependentUpon>MRepuestosXMantenimiento_modal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MVistaBitacora_modal.resx">
+      <DependentUpon>MVistaBitacora_modal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MVistaBitacora.resx">
+      <DependentUpon>MVistaBitacora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MControlVehiculos.resx">
+      <DependentUpon>MControlVehiculos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MControlVehiculos_modal.resx">
+      <DependentUpon>MControlVehiculos_modal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MGestionProveedores.resx">
+      <DependentUpon>MGestionProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MCatalogoRepuestos.resx">
+      <DependentUpon>MCatalogoRepuestos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MGestionEncargados.resx">
+      <DependentUpon>MGestionEncargados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MControlTiposVehiculos.resx">
+      <DependentUpon>MControlTiposVehiculos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MGestionUsuarios.resx">
+      <DependentUpon>MGestionUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MGestionProveedores_modal.resx">
+      <DependentUpon>MGestionProveedores_modal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MCatalogoRepuestos_modal.resx">
+      <DependentUpon>MCatalogoRepuestos_modal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MGestionEncargados_modal.resx">
+      <DependentUpon>MGestionEncargados_modal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MControlTiposVehiculos_modal.resx">
+      <DependentUpon>MControlTiposVehiculos_modal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MGestionUsuarios_modal.resx">
+      <DependentUpon>MGestionUsuarios_modal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MControlMantenimientos.resx">
+      <DependentUpon>MControlMantenimientos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Views\MReportes.resx">
+      <DependentUpon>MReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="CONMMAP_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\man.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\technician.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\car2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tool-box.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monitoring.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\website.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\previous.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checklist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smartphone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="tork.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
